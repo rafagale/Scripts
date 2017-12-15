@@ -1,8 +1,8 @@
 #!/bin/sh
-su $1
+# Ejecutar como root
 dnf -y install openssh-server openssh-clients
 service sshd start
 chkconfig –level 235 sshd on
 service sshd restart
 ifconfig
-echo "HOLA"
+echo "SSH configurado"
